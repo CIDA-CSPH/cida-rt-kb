@@ -1,0 +1,23 @@
+site_name: CIDA Research Tools Knowledge Base
+nav:
+ - Home: index.md
+ - CIDA Coding Guidelines:
+   - coding_guidelines.md
+   - data_storage.md
+ - Git and GitHub:
+   - git.md
+ - Computing Resources:
+   - CIDA_computing_resources.md
+   - alpine.md
+   - CSPH Biostats Cluster:
+     - CIDA_BIOS_Cluster.md
+     - CIDA_BIOS_Cluster_Interactive_IDEs.md
+ - Unix / Command Line Tutorials:
+   - cron-jobs.md
+plugins:
+ - search
+theme:
+ variant: classic
+ palette:
+  primary: indigo
+  

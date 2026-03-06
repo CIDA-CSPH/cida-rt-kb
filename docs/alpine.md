@@ -1,19 +1,23 @@
-# Alpine HPC
+#Alpine HPC
 
-## Introduction
+
+
+## Alpine 
+
+### Introduction
 
 This document provides a brief overview of Alpine, the University of Colorado's High Performance Computing Cluster (HPC). Alpine allows researchers across campus access to >18k computer cores, high memory computing cores, and specialized hardware like GPUs. It is available to all University of Colorado Anschutz employees and students. General documentation on Alpine can be found at https://curc.readthedocs.io/en/latest/clusters/alpine/index.html#
 
 Who does this apply to: All members of CIDA (Professor, RA, RI, Senior RI, PRA, Senior PRA)
 
-## Definitions
+### Definitions
 
 * `HPC` high performance computing
 * `RMACC` Rocky Mountain Advanced Computing Consortium
 * `ACCESS-CI` Advanced Cyberinfrastructure Coordination Ecosystem: Services & Support - Cyberinfrastructure
 * `XSEDE` Extreme Science and Engineering Discovery Environment
 
-## Accessing Alpine
+### Accessing Alpine
 
 Getting an Alpine account is a 4-step process that is detailed at https://curc.readthedocs.io/en/latest/access/rmacc.html
 
@@ -28,11 +32,11 @@ Getting an Alpine account is a 4-step process that is detailed at https://curc.r
 3. You will receive an email confirmation with detailed instructions on how to use Alpine. It may take a few weeks to receive this confirmation after sending the email in Step 2.
 4. Now you can log onto Alpine! Note, currently for CU Anscutz members, the only way to access Alpine is via the OnDemand web browser as ssh access is not allowed at this time.
 
-## Alpine Hardware
+### Alpine Hardware
 
 A comprehensive list of all the hardware available on Alpine can be found at https://curc.readthedocs.io/en/latest/clusters/alpine/alpine-hardware.html. Specific hardware available to CU Anschutz memebers will be provided when your account is created.
 
-## Quick Start
+### Quick Start
 
 A quick start guide can be found at https://curc.readthedocs.io/en/latest/clusters/alpine/quick-start.html. Much more detailed information is provided in the account creation confirmation email sent by rc-help@colorado.edu.
 

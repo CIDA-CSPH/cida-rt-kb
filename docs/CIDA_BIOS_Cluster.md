@@ -1,4 +1,4 @@
-# Computing On The CSPH Biostats Cluster
+#Computing On The CSPH Biostats Cluster
 
 
 
@@ -21,7 +21,7 @@ Because HPC clusters are intended to serve a group of people (i.e. A biostatisti
 
 When a user is ready to run something (an analysis, processing pipeline, etc) on the cluster, they will submit a new *job* to the cluster. The cluster will then schedule and run the job as soon as compute resources are available.
 
-[]("figures/CIDA_BIOS_Cluster/cluster_basic_diagram.png")
+![](figures/CIDA_BIOS_Cluster/cluster_basic_diagram.png)
 
 The example figure above shows an example cluster with three users. Each user connects to the Head Node to submit their jobs.
 
@@ -36,7 +36,7 @@ HPC clusters are useful for:
 
 The CSPH Biostats cluster consists of four nodes. The `csphbiostats.ucdenver.pvt` node serves as both a head node and one of the compute nodes (i.e. Submitted jobs may also run on this node), and the `cidalappc[1-3].ucdenver.pvt` nodes serve as compute nodes. 
 
-[]("figures/CIDA_BIOS_Cluster/Biostats_HPC_diagram.png")
+![](figures/CIDA_BIOS_Cluster/Biostats_HPC_diagram.png)
 
 The CIDA/Biostats server uses the [SLURM](https://slurm.schedmd.com) system to manage job scheduling and resource management on the cluster. 
 
@@ -51,11 +51,73 @@ Once approved, an account will be created for you on the server.
 
 To log in to the CSPH Biostats Cluster, you can use SSH from the command line or an SSH client of your choice. 
 
-[]("figures/CIDA_BIOS_Cluster/biostats_hpc_ssh.png")
+![](figures/CIDA_BIOS_Cluster/biostats_hpc_ssh.png)
 
 If you are connecting from the command line (like the above example), run:
 
-[]("figures/CIDA_BIOS_Cluster/cluster_sbatch.png")
+```
+ssh <your_username>@csphbiostats.ucdenver.pvt
+```
+
+where `<your_username>` is your CU system username (i.e Your username for UCDAccess, Outlook, etc)
+
+On login, you will be prompted for a password which will be your CU system password (i.e. Your password for UCDAccess, Outlook, etc).
+
+Once you've successfully logged in, you should see a prompt like the final line in the screenshot, showing that you are logged in to `csphbiostats.ucdenver.pvt`.
+
+To make future logins more convenient, you could configure an SSH config profile and RSA key pair, which will enable password-less login. 
+
+## Submitting a Job on the CSPH Biostats Cluster
+
+In the sections below, I will describe a few different ways of submitting a job on the cluster, along with their potential use cases.
+
+### Using `sbatch`
+The most common way of submitting a job on the cluster is to use the `sbatch` command.
+
+To submit a job using `sbatch`, you should first create a batch script which will list the commands to be executed as part of your job. 
+
+The below example shows a simple batch script `my_batch.sh` which executes a single R script. 
+
+```
+#!/bin/bash
+#SBATCH --job-name=my_batch
+#SBATCH --output=my_batch.log
+#SBATCH --error=my_batch.err
+
+Rscript my_analysis.R
+```
+
+The first line:
+
+```#!/bin/bash```
+
+ is required, and is used to determine how your script will be executed. In this case, the script will be executed using `bash`.
+
+The next few lines will be parsed by SLURM to set parameters/options for your batch job. 
+
+```
+#SBATCH --job-name=my_batch
+#SBATCH --output=my_batch.log
+#SBATCH --error=my_batch.err
+```
+
+In order:
+
+1. `--job-name` - Sets a name for your job.
+2. `--output` - Sets the output log file for your job. Any log messsages or outputs from your script will be sent to this file.
+3. `--error` - Sets the error log file for your job. Any log or error messages produced by your script will be sent to this file.
+
+Any comment line containing `#SBATCH` before the first command in your script will be parsed by SLURM.
+
+Although `#SBATCH` lines are not required, I recommend at least providing the `--output` and `--error` options, since otherwise your output and error streams will both be directed to the default file `slurm-<job_id>.out`
+
+We can submit this job by running:
+
+```
+sbatch my_batch.sh
+```
+
+![](figures/CIDA_BIOS_Cluster/cluster_sbatch.png)
 
 When we execute the `sbatch` command, SLURM will assign the job an ID and schedule the job to execute. In this case, our job is assigned ID `6179` (first arrow in the figure).
 
@@ -87,7 +149,15 @@ An example below shows execution of a simple shell script using `srun`.
 
 The command:
 
-[]("figures/CIDA_BIOS_Cluster/cluster_srun.png")
+```
+srun --exclude=csphbiostats.ucdenver.pvt ./my_script.sh
+```
+
+will schedule a new job to run the script `./my_script.sh`. 
+
+The `--exclude` flag tells SLURM to schedule the job on any node except the node(s) listed. In this case, we exclude the `csphbiostats.ucdenver.pvt` node to ensure our job runs on one of the `cidalappc[1-3].ucdenver.pvt` nodes (and the first line of the script output shows our job ran on `cidalappc01`).
+
+![](figures/CIDA_BIOS_Cluster/cluster_srun.png)
 
 #### Interactive Jobs
 `srun` is also useful for running *interactive* jobs. An interactive job opens a terminal session on a compute node, allowing you to run commands and script interactively.
@@ -96,7 +166,32 @@ Interactive jobs are useful for running quick commands or scripts, or anytime yo
 
 The command:
 
-[]("figures/CIDA_BIOS_Cluster/interactive_job.png")
+```
+srun --pty --exclude=csphbiostats.ucdenver.pvt /bin/bash -i
+```
+
+will schedule a new interactive job on a compute node. 
+
+This command is similar to the previous `srun` command we used but has a few key differences:
+
+1. The addition of the `--pty` flag tells SLURM that this is an interactive job.
+2. The command `/bin/bash -i` will execute an interactive shell on the compute node.
+
+After submitting the job, we see the prompt string has changed from:
+
+```[hillandr@csphbiostats job_example]```
+
+ to 
+
+ ```[hillandr@cidalappc01 job_example]```.
+
+This indicates that we are now running an interactive job on the compute node `cidalappc01`. 
+
+At this point, we can execute any commands or scripts normally.
+
+To end the interactive job, type `exit`.
+
+![](figures/CIDA_BIOS_Cluster/interactive_job.png)
 
 #### When to use `srun` 
 
@@ -114,17 +209,17 @@ The below screenshots show an example of connecting to `csphbiostats.ucdenver.pv
 
 First, open Cyberduck and click the 'Open Connection' button on the top bar.
 
-[]("figures/CIDA_BIOS_Cluster/cyberduck_1.png")
+![](figures/CIDA_BIOS_Cluster/cyberduck_1.png)
 
 Next, ensure that the 'SFTP' option is selected in the dropdown, then input your SSH credentials.
 
-[]("figures/CIDA_BIOS_Cluster/cyberduck_2.png")
+![](figures/CIDA_BIOS_Cluster/cyberduck_2.png)
 
 If successful, you should see a file browser interface showing your home directory on `csphbiostats.ucdenver.pvt`.
 
 You can use the interface to navigate and download and existing files. You can also drag-and-drop files from your local machine to upload them to the cluster.
 
-[]("figures/CIDA_BIOS_Cluster/cyberduck_3.png")
+![](figures/CIDA_BIOS_Cluster/cyberduck_3.png)
 
 ### Networked Storage
 
