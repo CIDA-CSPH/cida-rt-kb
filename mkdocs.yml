@@ -4,6 +4,11 @@ nav:
  - CIDA Coding Guidelines:
    - coding_guidelines.md
    - data_storage.md
+ - Programming Tutorials:
+   - sas-macros.md
+   - tabling_packages.md
+ - Unix / Command Line Tutorials:
+   - cron-jobs.md
  - Git and GitHub:
    - git.md
  - Computing Resources:
@@ -12,8 +17,7 @@ nav:
    - CSPH Biostats Cluster:
      - CIDA_BIOS_Cluster.md
      - CIDA_BIOS_Cluster_Interactive_IDEs.md
- - Unix / Command Line Tutorials:
-   - cron-jobs.md
+
 plugins:
  - search
 theme:

@@ -17,7 +17,8 @@ If you are a new CIDA employee, we recommend you start by:
 
 There are various other articles and resources which can be accessed via the sidebar or the search box:
 
-- CIDA members who work on large-scale data analyses may benefit from reading about:
+CIDA members who work on large-scale data analyses may benefit from reading about:
+
   - The [Alpine HPC](alpine.md) system for large-scale analysis on deidentified/non-PHI data. 
   - The [CSPH Biostats Cluster](CIDA_BIOS_Cluster.md) for large-scale analysis with sensitive/PHI data.
     - The CSPH Biostats Cluster can also be configured for [interactive coding](CIDA_BIOS_Cluster_Interactive_IDEs.md) in RStudio or JupyterLab
