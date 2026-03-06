@@ -1,6 +1,4 @@
-#CIDA Coding Guidelines
-
-
+# CIDA Coding Guidelines
 
 ## Coding Guidelines and Best Practices
 

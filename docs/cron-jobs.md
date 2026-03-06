@@ -1,24 +1,20 @@
-#Cron Jobs
+# Cron Jobs
 
-
-
-## Cron Jobs
-
-### Introduction
+## Introduction
 
 This document provides some description on how to run cron jobs on the biostats server (a computation server that part of the Dept. of Biostatistics and Informatics). The idea of a cron job is that allows a user to schedule when a piece of code is executed. The biostats server is an ideal place to run these as this "computer" is always on and thus it removes the need of an analyst to worry about having their personal computer running when it is time to execute the code.
 
 Who does this apply to: All members of CIDA (Professor, RA, RI, Senior RI, PRA, Senior PRA)
 
-### Definitions
+## Definitions
 
 None at this time
 
-### Accessing the biostats server
+## Accessing the biostats server
 
 To gain access to the biostats server contact the Research Tools Committee. This is available to all members of CIDA.
 
-### Steps to a Run Cron Job
+## Steps to a Run Cron Job
 
 The following is specific to the CIDA biostats server which is based in Linux. Although these steps may seem complicated, most of this only needs to be set up once and the Research Tools Committee is happy to help with this. 
 
@@ -62,7 +58,7 @@ To delete the cron job so it no longer execute use
 `crontab -r`
 
 
-### Resources
+## Resources
 
 Information on how to use cron job, especially how to set jobs to run on a given interval see the following
 

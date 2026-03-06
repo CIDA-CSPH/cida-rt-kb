@@ -1,6 +1,10 @@
-#Rstudio/jupyterlab On The CSPH Biostats Cluster
+# Rstudio/JupyterLab On The CSPH Biostats Cluster
 
 ## Introduction
+
+### L3 Heading
+
+#### L4 Heading
 
 This document will guide you through running interactive RStudio (and/or JupyterLab) sessions on the Biostats cluster.
 
@@ -18,7 +22,7 @@ If you've never used the `csphbiostats` cluster before, you'll need to request a
 
 If you previously followed this guide to set up RStudio/JupyterLab and just need a refresher on how to launch an RStudio/JupyterLab job, check out the [Quickstart](#quickstart-for-returning-users) section.
 
-### A1. Motivation
+### Motivation
 Using RStudio/JupyterLab on the `csphbiostats` cluster allows you to:
 
 - Use the cluster's significant [computational resources](https://cida-csph.github.io/CIDAtools/articles/CIDA_BIOS_Cluster.html#csph-biostats-hpc-cluster) to work with larger datasets than would be possible on a local machine, while coding interactively in a familiar environment.

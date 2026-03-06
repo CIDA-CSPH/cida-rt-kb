@@ -1,10 +1,6 @@
-#Tracking Code In Git/github
+# Tracking Code In Git/github
 
 []("figures/git/sph_cida_wm_blk.png")
-
----
-
-
 
 # Introduction
 
