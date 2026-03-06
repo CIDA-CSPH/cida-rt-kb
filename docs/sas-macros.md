@@ -1,0 +1,33 @@
+#CIDA SAS Macros
+
+
+
+
+## List of SAS macros
+
+SAS macros in CIDAtools can be searched below, and their source code is available [here](https://github.com/CIDA-CSPH/CIDAtools/tree/master/inst/sas). 
+
+```{r}
+# eval=rmarkdown::pandoc_available("1.12.3")
+
+path <- system.file("sas", package = "CIDAtools")
+
+if(length(path)) {
+  sas_files <- list.files(path, full.names = T)
+
+  keywords <- sapply(sas_files, function(f) {
+    lines <- readLines(f)
+    keys <- lines[grepl("Keywords", lines, ignore.case = T)]
+    gsub("\\*|\\* |Keywords: |;", "", keys, ignore.case = T)
+  })
+
+  sas_index <- data.frame(
+    name = list.files(path, full.names = F),
+    keywords = keywords, row.names = NULL
+  )
+
+  # DT::datatable(sas_index)
+  kable(sas_index) %>% 
+    kable_styling(c("striped", "condensed"), full_width = F)
+}
+```
