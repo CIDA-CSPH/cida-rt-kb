@@ -10,7 +10,8 @@ nav:
  - Unix / Command Line Tutorials:
    - cron-jobs.md
  - Git and GitHub:
-   - git.md
+   - git/01_github_prelim.md
+   - git/git.md
  - Computing Resources:
    - CIDA_computing_resources.md
    - alpine.md
