@@ -1,6 +1,7 @@
 site_name: CIDA Research Tools Knowledge Base
 nav:
  - Home: index.md
+ - Contributing: contributing/CONTRIBUTING.md
  - CIDA Coding Guidelines:
    - coding_guidelines.md
    - data_storage.md
@@ -10,7 +11,9 @@ nav:
  - Unix / Command Line Tutorials:
    - cron-jobs.md
  - Git and GitHub:
-   - git/01_github_prelim.md
+   - git/github_setup_01.md
+   - git/github_basics_02.md
+   - git/github_troubleshooting_03.md
    - git/git.md
  - Computing Resources:
    - CIDA_computing_resources.md
@@ -18,7 +21,8 @@ nav:
    - CSPH Biostats Cluster:
      - CIDA_BIOS_Cluster.md
      - CIDA_BIOS_Cluster_Interactive_IDEs.md
-
+repo_url: https://github.com/CIDA-CSPH/CIDAtools
+repo_name: CIDA-CSPH/CIDAtools
 plugins:
  - search
 theme:

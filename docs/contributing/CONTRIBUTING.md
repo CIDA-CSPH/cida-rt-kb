@@ -10,16 +10,18 @@ To submit an issue, navigate to the [Issues](https://github.com/CIDA-CSPH/RT_Tes
 When creating an issue, you can assign specific 'tags' which relate to the type of request you are making (i.e. bug report, request for a new article, etc.)
 
 The GitHub issues page is useful for:
+
 - **Bug/Issue Reports** - Reports for broken links, visual bug, outdated/incorrect information, etc.
 - **Article/Tutorial Requests** - If you would like to have a tutorial/article/vignette generated for a specific topic, feel free to submit an issue!
 
 ## Submitting a Pull Request
 
-We will also accept pull requests from CIDA members:
+We are happy to accept pull requests for:
+
 - **Content Edits and Updates** - If you identify an issue with the site, or have suggested edits to existing content, we are happy to merge these in via pull request!
 - **Articles/Tutorials/Vignettes** - If you want to share your expertise in a specific area via an article, tutorial, or vignette, feel free to submit a pull request and we will merge your contributions into the site!
 
-See the [Make Changes to CIDA RT Knowledge Base](#make-changes-to-cida-rt-knowledge-base) section for detailed instructions on how to set up a local environment for contributing to the site.
+See the [Making Changes](#making-changes) section for detailed instructions on how to set up a local environment for contributing to the site.
 
 ## Making Changes
 
@@ -32,7 +34,7 @@ Forking the RT_Test_Site repository creates a copy of the repository under your 
 
 You can create a fork using the 'Fork' button on the main repository:
 
-<img src="img/fork_repository_button.png" width=60% alt="Image showing the location of the 'fork' button on a GitHub repository page">
+<img src="figures/fork_repository_button.png" alt="Image showing the location of the 'fork' button on a GitHub repository page">
 
 ### 2. Clone the forked repository
 You can clone your fork of the site repository using any method you find convenient (command line, RStudio, etc).

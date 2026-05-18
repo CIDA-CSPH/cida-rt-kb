@@ -23,4 +23,6 @@ CIDA members who work on large-scale data analyses may benefit from reading abou
   - The [CSPH Biostats Cluster](CIDA_BIOS_Cluster.md) for large-scale analysis with sensitive/PHI data.
     - The CSPH Biostats Cluster can also be configured for [interactive coding](CIDA_BIOS_Cluster_Interactive_IDEs.md) in RStudio or JupyterLab
 
+## Contributing
 
+If you are interested in contributing to this site (making edits, fixing issues, or writing new content) please view our [Contributor's Guide](CONTRIBUTING.md) for instructions on how to download and configure the site. 
