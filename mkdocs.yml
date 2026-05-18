@@ -16,11 +16,11 @@ nav:
    - git/github_troubleshooting_03.md
    - git/git.md
  - Computing Resources:
-   - CIDA_computing_resources.md
-   - alpine.md
+   - compuitng/CIDA_computing_resources.md
+   - computing/alpine.md
    - CSPH Biostats Cluster:
-     - CIDA_BIOS_Cluster.md
-     - CIDA_BIOS_Cluster_Interactive_IDEs.md
+     - computing/CIDA_BIOS_Cluster.md
+     - computing/CIDA_BIOS_Cluster_Interactive_IDEs.md
 repo_url: https://github.com/CIDA-CSPH/CIDAtools
 repo_name: CIDA-CSPH/CIDAtools
 plugins:
