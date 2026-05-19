@@ -19,8 +19,8 @@ Who does this apply to: All members of CIDA (Professor, RA, RI, Senior RI, PRA, 
 * **File System** refers to any place where files or data can be stored but has no compute ability
 * **Local storage** refers to any university provided computer with a physical hard drive 
 * **External server** refers to any server which houses data or runs analysis that isn't a personal computer
-* **P-drive** a.k.a the **CIDA (P) Drive** is PHI compliant storage where most CIDA data should be stored. This offically known as the **Isilon Central File Server**
-* **GitHub** is the offical repository CIDA should keep code, available [here](https://github.com/CIDA-CSPH) (requires VPN connection)
+* **P-drive** a.k.a the **CIDA (P) Drive** is PHI compliant storage where most CIDA data should be stored. This is officially known as the **Isilon Central File Server**
+* **GitHub** is the official repository CIDA should keep code, available [here](https://github.com/CIDA-CSPH) (requires VPN connection)
 * **OneDrive for Business** refers to Microsoft’s file-syncing software licensed by the University
 * **PetaLibrary** is a large file system that is accessible to Research Computing Tools like Alpine. this is not a PHI compliant storage solution. More information can be found [here](https://www.colorado.edu/rc/resources/petalibrary)
 * **Eureka** is the Virtual Machine run by Health Data Compass (HDC)
@@ -42,7 +42,7 @@ Who does this apply to: All members of CIDA (Professor, RA, RI, Senior RI, PRA, 
 
 #### CIDA (P) Drive 
 
-* This drive is officialy called the *Isilon Central File Server* in SOM-IT documentation
+* This drive is officially called the *Isilon Central File Server* in SOM-IT documentation
 * Mapping depends on operating system. See instructions here for mapping drives.
     * MAC: `smb://data.ucdenver.pvt/dept/SPH/SPH-CIDA` 
     * Windows: `\\data.ucdenver.pvt\dept\SPH\SPH-CIDA`
@@ -53,7 +53,7 @@ Who does this apply to: All members of CIDA (Professor, RA, RI, Senior RI, PRA, 
     * SPH-CIDA/CIDA/Shared 
         * The CIDA/Shared directory is accessible to all CIDA members who have gained approval from a data manager. Folders are also accessible to external users who have been approved for access. 
         * Files and directories that you create on the shared drive inherit their permissions from their parent folder. You cannot restrict access to specific directories in accordance with data use agreements without the help of IT. 
-* Use the following links to [Request to Create a CIDA (P) Folder](https://app.smartsheet.com/b/form/d1d93ae08f4349d48654950eea9b5bbd) or to [Update an Exisiting CIDA (P) Drive Folder](https://app.smartsheet.com/b/form/c22bbec56f8d4607bedc441be60bf8c8)
+* Use the following links to [Request to Create a CIDA (P) Folder](https://app.smartsheet.com/b/form/d1d93ae08f4349d48654950eea9b5bbd) or to [Update an Existing CIDA (P) Drive Folder](https://app.smartsheet.com/b/form/c22bbec56f8d4607bedc441be60bf8c8)
 * Pros: 
     * All files and directories are backed up nightly; backups are stored for 30 days. 
     * Collaboration and transfers of data among CIDA members can be quick and easy.
@@ -81,7 +81,7 @@ Who does this apply to: All members of CIDA (Professor, RA, RI, Senior RI, PRA, 
 #### GitHub
 
 *	In general, GitHub should be used for everything, except for data. While tracking small data sets in Git and pushing to GitHub is usually harmless, tracking data sets in Git can snowball the storage needed in GitHub and also slow down your git commands.  
-*	Please consult the following guidelines for more infomration
+*	Please consult the following guidelines for more information
     * [CIDA's Coding Guidelines](coding_guidelines.md)
 	* [CIDA's Intro to Github](git.md)
 *	All repositories on GitHub should be updated frequently, but especially prior to leaving on vacation or any other extended time out of office.
@@ -93,15 +93,15 @@ Who does this apply to: All members of CIDA (Professor, RA, RI, Senior RI, PRA, 
 *	Backups of code, reports, and other files should still be copied over to the CIDA drive so that it is accessible to others in CIDA in case of an emergency. 
 *	For projects requiring Eureka, the [Eureka Cost Estimator](https://research.cuanschutz.edu/healthdatacompass/home/eureka-cloud-analytics/eureka-pricing) can be used to determine the expected costs of a particular project a priori. These costs should be charged to the project’s PI if possible.
 
-#### Addtional External File Systems and Servers
+#### Additional External File Systems and Servers
 
-For more infomration about the followine, please visit the links, contact SOM-IT or contact the Researc Tools committee
+For more information about the following, please visit the links, contact SOM-IT or contact the Research Tools committee
 
 * [Petalibrary](https://www.colorado.edu/rc/resources/petalibrary) - a file system that can mount to the Alpine HPC. Cost of Petalibrary can be found [here](https://curc.readthedocs.io/en/latest/petalibrary/allocation_types.html)
-* [Google Workspace](https://www.cuanschutz.edu/offices/office-of-information-technology/tools-services/google-workspace) - Some CIDA members might have access to the Univerity of Colorado managed Google Workspaces
+* [Google Workspace](https://www.cuanschutz.edu/offices/office-of-information-technology/tools-services/google-workspace) - Some CIDA members might have access to the University of Colorado managed Google Workspaces
 * [CIDA-BIOS HPC](CIDA_BIOS_Cluster.md) - HIPPA compliant HPC that is considered a SLCE server.
 * For very large data, contact SOM-IT for solutions
-* SOM-IT also offers cloud storage and computing (either Google Cloud or Microsoft Azure). These systems are pay-as-you-use and can be quite expensive and not often compatiable with PHI/PII data.
+* SOM-IT also offers cloud storage and computing (either Google Cloud or Microsoft Azure). These systems are pay-as-you-use and can be quite expensive and not often compatible with PHI/PII data.
 
 Care should be taken that data living on an external server remain on the external server. However, code, reports, and any other files necessary to the project should still be copied to the CIDA drive at regular intervals (exceptions may exist, e.g., if other processes are specified in CIDA’s memorandum of understanding with your research group).
 
@@ -124,7 +124,7 @@ Care should be taken that data living on an external server remain on the extern
 | Email | Email is not an encouraged means of transferring data and should be done in circumstances when no other approach is available. Note that although email between CU-affiliated email addresses are automatically encrypted, this is not the case for external emails. You can manually encrypt by putting one of these keywords in brackets in the subject of an email: secure, safemail, or encrypt. Email from any other email system, such as gmail, is not acceptable. |
 | Not acceptable | Non-approved web-based systems including: Dropbox and unencrypted flash/hard drives, even if the file is password protected. Email from any other email system, such as gmail | 
 
-When trasferring data is often to a good idea to setup checks to make sure files have not been correputed or altered. An an example of this can be seen [here](https://tombuntu.com/index.php/2007/12/21/how-to-use-md5sum-to-verify-data-integrity/)
+When transferring data it is often a good idea to setup checks to make sure files have not been corrupted or altered. An an example of this can be seen [here](https://tombuntu.com/index.php/2007/12/21/how-to-use-md5sum-to-verify-data-integrity/)
 
 ### Useful Links
 
