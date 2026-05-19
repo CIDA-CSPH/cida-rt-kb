@@ -1,7 +1,6 @@
 #CIDA Data Storage Guidelines
 
 
-
 ## CIDA Data Storage Tools 
 
 ### Introduction
@@ -12,19 +11,21 @@ Who does this apply to: All members of CIDA (Professor, RA, RI, Senior RI, PRA, 
 
 ### Definitions
 
-* ‘Code’ refers to any R, SAS, Stata, etc. (scripts stored as plain text formatted files)
-*	‘Data’ refers to spreadsheets, tables, or other information used to run analysis on
-*	‘Report’ refers to any document which outlines results of analysis for sending to an investigator
-*	GitLab is the Lhotse CIDA GitLab repository, available here (requires VPN connection)
-*	‘Local storage’ refers to any university provided computer with a physical hard drive 
-*	‘External server’ refers to a server which houses data or runs analysis (except Lhotse)
-*	‘Eureka’ is the Virtual Machine run by Health Data Compass (HDC)
-*	‘OneDrive for Business’ refers to Microsoft’s file-syncing software licensed by the University
-*	‘HPC’ refers to “High Performance Computing”
+* **Code** refers to any R, SAS, Stata, etc. (scripts stored as plain text formatted files)
+* **Data** refers to spreadsheets, tables, or other information used to run analysis on
+* **Report** refers to any document which outlines results of analysis for sending to an investigator
+* **GitHub** is the offical repository CIDA should keep code, available [here](https://github.com/CIDA-CSPH) (requires VPN connection)
+* **Local storage** refers to any university provided computer with a physical hard drive 
+* **External server** refers to any server which houses data or runs analysis that isn't a personal computer
+* **Eureka** is the Virtual Machine run by Health Data Compass (HDC)
+* **OneDrive for Business** refers to Microsoft’s file-syncing software licensed by the University
+* **HPC** refers to “High Performance Computing” such as [Alpine](https://www.colorado.edu/rc/alpine).
+* **SLCE** refers to Secure Local Compute Environment, maybe information can be found [here](https://medschool.cuanschutz.edu/informationservices/research/slce)
+* **P-drive** a.k.a the **CIDA (P) Drive** is PHI compliant storage where most CIDA data should be stored. This offically known as the **Isilon Central File Server**
+* **PetaLibrary** is a large file system that is accessible to Research Computing Tools like Alpine. this is not a PHI compliant storage solution. More information can be found [here](https://www.colorado.edu/rc/resources/petalibrary)
+* **PHI** refers to Protected Health Information which is any healthcare data that can be use to identify an individual
+* **PID** refers to Persistient Identifier Data which is any long-lasting identifier in data
 
-### Summary
-
-*	The CIDA (P) Drive is the required ongoing storage location for project data. Other data storage locations may be used temporarily during the course of active work on a project. 
 
 ### Data Storage Locations Available to CIDA Members
 
@@ -41,10 +42,10 @@ Who does this apply to: All members of CIDA (Professor, RA, RI, Senior RI, PRA, 
 #### CIDA (P) Drive 
 
 * Mapping depends on operating system. See instructions here for mapping drives.
-    * MAC: `smb://data.ucdenver.pvt/dept/SPH/SPH-CIDA/CIDA` 
-    * Windows: `\\data.ucdenver.pvt\dept\SPH\SPH-CIDA\CIDA`
+    * MAC: `smb://data.ucdenver.pvt/dept/SPH/SPH-CIDA` 
+    * Windows: `\\data.ucdenver.pvt\dept\SPH\SPH-CIDA`
     * If you have recently started and are having trouble mapping this drive, contact [SOM-IT](https://medschool.cuanschutz.edu/informationservices). 
-* CIDA project data must be stored here on a permanent basis (with certain exceptions, e.g., projects larger > 16 GB or if the collaboration dictates otherwise). 
+* CIDA project data must be stored here on a permanent basis (with certain exceptions, e.g., projects with large data or if the collaboration dictates otherwise). 
 * The storage under the CIDA Drive is set up as follows:
     * CIDA/Branches: Long-standing collaborations, including those operating under MOUs, are treated as Branches, and their data should be stored in a subdirectory of CIDA/Branches. 
     * CIDA/Projects: Data for projects for the consulting arm (i.e., those with a P-number) should be stored in a subdirectory of CIDA/Projects. Use this [form](https://app.smartsheet.com/b/form/d1d93ae08f4349d48654950eea9b5bbd) to create folders in the P-drive with specific permissions, or this [form](https://app.smartsheet.com/b/form/c22bbec56f8d4607bedc441be60bf8c8) to update the permissions of an existing folder. These forms are directly sent to SOM IT. 
@@ -60,23 +61,10 @@ Who does this apply to: All members of CIDA (Professor, RA, RI, Senior RI, PRA, 
     * Up-to-date raw data for all projects should be available in their expected location on this drive at least weekly, and especially at project conclusion, or prior to a project not being actively worked on.
     * Eliminate redundancies and intermediate data sets in projects with “big” data; only store the data you need to make code and reports run. 
     * It is OK not to work directly on the CIDA drive in cases where speed is a concern. If you do, know that all active projects should copy data over to the CIDA drive regularly (weekly), and especially prior to taking leave. The CIDAtools R package, located [here](https://github.com/CIDA-CSPH/CIDAtools), has the function `BackupProject()` that can streamline this process. By default, this function only updates folders/files in DataRaw/* and DataProcessed/* which have changed, so it should not take too long.
-* CIDA pays for this server storage on a per-GB-month basis, so be cognizant of the size of the data utilized by your projects. If possible, the project’s scope of work should charge more for data sets and project materials which are anticipated to fall above a threshold of 32 GB. [The OIT’s central file storage rate](https://www1.ucdenver.edu/offices/office-of-information-technology/services/billing-and-rates) should be applied and multiplied to account for anticipated duration of storage. See below. 
-
-__Data storage costs on CIDA drive__
-```r
-tabl <- "
-|         | Expected 10-year cost ($)  |
-|---------------|:-------------:|------:|-----:|
-| Data packet size (GB)  | P-drive | OneDrive for Businness (per user)^1^ | Eureka^2^ | 
-| 10      | $30 | $600 | $28 | 
-| 100      | $300      |   $600 | $276 |
-| 1,000 (1 TB) | $3,000      |    $600 | $2,760 |
-| 10,000 (10 TB)  | $30,000      |    $1,200 | $27,600 |
-"
-cat(tabl) # output the table in a format good for HTML/PDF/docx conversion
-```
-^1^Charged to University; not to CIDA  
-^2^Prices are based on the HDC website.
+* CIDA pays for this server storage on a per-GB-month basis, so be cognizant of the size of the data utilized by your projects. If possible, the project’s scope of work should charge more for data sets and project materials which are anticipated to fall above a threshold of 32 GB. Some links to data storage prices
+    * [CIDA (P) Drive a.k.a Isilon](https://www.cuanschutz.edu/offices/office-of-information-technology/tools-services/storage-servers-and-backups)
+	* [Eureka](https://research.cuanschutz.edu/healthdatacompass/home/eureka-cloud-analytics/eureka-pricing)
+	* [PetaLibrary](https://curc.readthedocs.io/en/latest/petalibrary/allocation_types.html)
 
 #### OneDrive for Business
 
@@ -119,16 +107,17 @@ cat(tabl) # output the table in a format good for HTML/PDF/docx conversion
 
 #### CIDA-BIOS High Performance Computing Server 
 
-*	The HPC was purchased by CIDA and funds from a U01 grant (Katerina Kechris and Debashis Ghosh are PIs). Therefore, primary priority is given to CIDA & research related to the U01 grant. Secondary priority is given to Ghosh & Kechris group members. [Tertiary access can be attained by requesting access from Dr. Kechris via smartsheet.]
-*	The server is a Dell PowerEdge R740XD, with Intel Xeon Gold 6152 2.1G X (2) CPU, 44 cores, 1TB memory, 240 SSD X (2) mirrored disk operating system, and ~50TB of usable disk storage. The operating system is CentOS 7.x, and common research software are available such as R, R Studio, MatLab, Python, and Java.
-*	Server is not HIPAA compliant and therefore no PHI can be stored on the server.
-*	Backups are available via Wasabi: https://wasabi.com/hot-cloud-storage/. 
+* The HPC was purchased by CIDA and funds from a U01 grant (Katerina Kechris and Debashis Ghosh are PIs). Therefore, primary priority is given to CIDA & research related to the U01 grant. Secondary priority is given to Ghosh & Kechris group members. [Tertiary access can be attained by requesting access from Dr. Kechris via smartsheet.]
+* The server is a Dell PowerEdge R740XD, with Intel Xeon Gold 6152 2.1G X (2) CPU, 44 cores, 1TB memory, 240 SSD X (2) mirrored disk operating system, and ~50TB of usable disk storage. The operating system is CentOS 7.x, and common research software are available such as R, R Studio, MatLab, Python, and Java.
+* Server is not HIPAA compliant and therefore no PHI can be stored on the server.
+* Backups are available via Wasabi: https://wasabi.com/hot-cloud-storage/.
+*  [CIDA sever info](CIDA_computing_resources.md)
 
 #### Unapproved data storage options
 
 *	__Only the options listed above are approved by CIDA for temporary data storage, and only the CIDA drive is approved for ongoing data storage__. Please follow the best practices and ask questions if you have them.
 *	__The following non-exhaustive list of data storage options are not approved by CIDA__: 
-    *	Dropbox
+    * Dropbox
     * Google Drive
     * OneDrive (personal)
     * Unencrypted hard drive or flash drive
@@ -164,8 +153,8 @@ http://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identificat
 VPN and Remote Desktop:  
 https://www1.ucdenver.edu/offices/office-of-information-technology/software/how-do-i-use/vpn-and-remote-access
 
-GitLab:  
-http://cidagitlab.ucdenver.pvt/
+GitHub:  
+https://github.com/CIDA-CSPH
 
 OneDrive for Business:  
 https://www1.ucdenver.edu/offices/office-of-information-technology/software/how-do-i-use/onedrive 
