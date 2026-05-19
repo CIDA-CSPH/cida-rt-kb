@@ -100,7 +100,7 @@ For more infomration about the followine, please visit the links, contact SOM-IT
 
 * [Petalibrary](https://www.colorado.edu/rc/resources/petalibrary) - a file system that can mount to the Alpine HPC. Cost of Petalibrary can be found [here](https://curc.readthedocs.io/en/latest/petalibrary/allocation_types.html)
 * [Google Workspace](https://www.cuanschutz.edu/offices/office-of-information-technology/tools-services/google-workspace) - Some CIDA members might have access to the Univerity of Colorado managed Google Workspaces
-* [CIDA-BIOS HPC](CIDA_computing_resources.md) - HIPPA compliant HPC that is considered a SLCE server.
+* [CIDA-BIOS HPC](CIDA_BIOS_Cluster.md) - HIPPA compliant HPC that is considered a SLCE server.
 * For very large data, contact SOM-IT for solutions
 * SOM-IT also offers cloud storage and computing (either Google Cloud or Microsoft Azure). These systems are pay-as-you-use and can be quite expensive and not often compatiable with PHI/PII data.
 
