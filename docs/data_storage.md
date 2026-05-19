@@ -62,12 +62,11 @@ Who does this apply to: All members of CIDA (Professor, RA, RI, Senior RI, PRA, 
 * Best Practices: 
     * Up-to-date raw data for all projects should be available in their expected location on this drive at least weekly, and especially at project conclusion, or prior to a project not being actively worked on.
     * Eliminate redundancies and intermediate data sets in projects with “big” data; only store the data you need to make code and reports run. 
-    * It is OK not to work directly on the CIDA drive in cases where speed is a concern. If you do, know that all active projects should copy data over to the CIDA drive regularly (weekly), and especially prior to taking leave. The CIDAtools R package, located [here](https://github.com/CIDA-CSPH/CIDAtools), has the function `BackupProject()` that can streamline this process. By default, this function only updates folders/files in DataRaw/* and DataProcessed/* which have changed, so it should not take too long.
 * CIDA pays for this server storage on a [per-GB-month basis](https://www.cuanschutz.edu/offices/office-of-information-technology/tools-services/storage-servers-and-backups), so be cognizant of the size of the data utilized by your projects.
 
 #### OneDrive for Business
 
-* OneDrive for Business is a hybrid local and cloud storage system that allows for up to 5TB of cloud storage. Individual file size is limited to 15 GB. 
+* OneDrive for Business is a hybrid local and cloud storage system that allows for up to 5TB of cloud storage. Note there are limitations on individual file sizes and types. 
 * Unlike the CIDA drive, files and directories saved to the OneDrive directory are private by default and are backed up to the cloud.
 * OneDrive for Business is HIPAA compliant. OIT and SOM-IT can access folders created on the directory, but only after a manager enters a data access request that gets approved by HR.
 * Files can be downloaded to your local computer from the cloud on an as-needed basis off-site, which ensures a limited amount of data is stored locally. 
