@@ -49,8 +49,8 @@ Who does this apply to: All members of CIDA (Professor, RA, RI, Senior RI, PRA, 
     * If you have recently started and are having trouble mapping this drive, contact [SOM-IT](https://medschool.cuanschutz.edu/informationservices). 
 * CIDA project data must be stored here on a permanent basis (with certain exceptions, e.g., projects with large data or if the collaboration dictates otherwise). 
 * The storage under the CIDA Drive is set up as follows:
-    * SPH-CIDA/Branches: Long-standing collaborations, including those operating under MOUs, are treated as Branches, and their data should be stored in a subdirectory of CIDA/Branches. 
-    * SPH-CIDA/CIDA/Shared 
+    * `SPH-CIDA/Branches`: Long-standing collaborations, including those operating under MOUs, are treated as Branches, and their data should be stored in a subdirectory of CIDA/Branches. 
+    * `SPH-CIDA/CIDA/Shared`
         * The CIDA/Shared directory is accessible to all CIDA members who have gained approval from a data manager. Folders are also accessible to external users who have been approved for access. 
         * Files and directories that you create on the shared drive inherit their permissions from their parent folder. You cannot restrict access to specific directories in accordance with data use agreements without the help of IT. 
 * Use the following links to [Request to Create a CIDA (P) Folder](https://app.smartsheet.com/b/form/d1d93ae08f4349d48654950eea9b5bbd) or to [Update an Existing CIDA (P) Drive Folder](https://app.smartsheet.com/b/form/c22bbec56f8d4607bedc441be60bf8c8)
@@ -82,8 +82,8 @@ Who does this apply to: All members of CIDA (Professor, RA, RI, Senior RI, PRA, 
 
 *	In general, GitHub should be used for everything, except for data. While tracking small data sets in Git and pushing to GitHub is usually harmless, tracking data sets in Git can snowball the storage needed in GitHub and also slow down your git commands.  
 *	Please consult the following guidelines for more information
-    * [CIDA's Coding Guidelines](coding_guidelines.md)
-	* [CIDA's Intro to Github](git.md)
+    * [CIDA's Coding Guidelines](../guidelines/coding_guidelines.md)
+	* [CIDA's Intro to Github](../git/git.md)
 *	All repositories on GitHub should be updated frequently, but especially prior to leaving on vacation or any other extended time out of office.
 
 #### Eureka by Health Data Compass (HDC)
@@ -99,7 +99,7 @@ For more information about the following, please visit the links, contact SOM-IT
 
 * [Petalibrary](https://www.colorado.edu/rc/resources/petalibrary) - a file system that can mount to the Alpine HPC. Cost of Petalibrary can be found [here](https://curc.readthedocs.io/en/latest/petalibrary/allocation_types.html)
 * [Google Workspace](https://www.cuanschutz.edu/offices/office-of-information-technology/tools-services/google-workspace) - Some CIDA members might have access to the University of Colorado managed Google Workspaces
-* [CIDA-BIOS HPC](CIDA_BIOS_Cluster.md) - HIPPA compliant HPC that is considered a SLCE server.
+* [CIDA-BIOS HPC](../computing/CIDA_BIOS_Cluster.md) - HIPPA compliant HPC that is considered a SLCE server.
 * For very large data, contact SOM-IT for solutions
 * SOM-IT also offers cloud storage and computing (either Google Cloud or Microsoft Azure). These systems are pay-as-you-use and can be quite expensive and not often compatible with PHI/PII data.
 

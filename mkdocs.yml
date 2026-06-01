@@ -1,26 +1,25 @@
 site_name: CIDA Research Tools Knowledge Base
 nav:
  - Home: index.md
- - Contributing: contributing/CONTRIBUTING.md
- - CIDA Coding Guidelines:
-   - coding_guidelines.md
-   - data_storage.md
+ - CIDA Coding Guidelines: guidelines/coding_guidelines.md
+ - CIDA Data Storage Guidelines: guidelines/data_storage.md
  - Programming Tutorials:
-   - sas-macros.md
-   - tabling_packages.md
+   - programming/sas-macros.md
+   - programming/tabling_packages.md
  - Unix / Command Line Tutorials:
-   - cron-jobs.md
+   - cli/cron-jobs.md
  - Git and GitHub:
    - git/github_setup_01.md
    - git/github_basics_02.md
    - git/github_troubleshooting_03.md
    - git/git.md
  - Computing Resources:
-   - compuitng/CIDA_computing_resources.md
+   - computing/CIDA_computing_resources.md
    - computing/alpine.md
    - CSPH Biostats Cluster:
      - computing/CIDA_BIOS_Cluster.md
      - computing/CIDA_BIOS_Cluster_Interactive_IDEs.md
+ - Contributing: contributing/CONTRIBUTING.md
 repo_url: https://github.com/CIDA-CSPH/cida-rt-kb
 repo_name: CIDA-CSPH/cida-rt-kb
 plugins:
