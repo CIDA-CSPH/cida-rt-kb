@@ -1,10 +1,11 @@
-## Experimental CIDA Documentation Site
+## CIDA Research Tools Knowledge Base
 
-**NOTE:** This site is in-development and may contain old/outdated information.
+> [!WARNING]
+> This site is currently under construction, so there may be broken links and missing/incomplete content.
 
-This site is an experimental site for CIDA technical resources, including the articles/vignettes which currently live in the CIDATools package documentation.
+This site is intended as a hub for CIDA technical resources, including the articles/vignettes which currently live in the CIDATools package documentation.
 
 Current deployment URL:
-https://shiny-adventure-j19egvz.pages.github.io/
+https://cida-csph.github.io/cida-rt-kb/
 
 
