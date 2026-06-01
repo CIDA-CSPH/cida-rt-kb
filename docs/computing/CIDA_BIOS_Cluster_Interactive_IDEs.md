@@ -137,7 +137,7 @@ Once the terminal window is open, type:
 ssh biostats
 ```
 
-![](figures/CIDA_BIOS_Cluster_Interactive_IDEs/biostats_hpc_ssh_2.png)
+![](figures/CIDA_BIOS_Cluster_Interactive_IDEs_figures/biostats_hpc_ssh_2.png)
 
 
 Once you've logged in via SSH, open a web browser on your local machine (but keep the SSH window open!) and enter:
@@ -150,11 +150,11 @@ in the address bar. If you assigned different ports in your config file, modify 
 
 In the browser, you should see an error screen. This is expected. 
 
-![](figures/CIDA_BIOS_Cluster_Interactive_IDEs/localhost_test.png)
+![](figures/CIDA_BIOS_Cluster_Interactive_IDEs_figures/localhost_test.png)
 
 Moving back to your SSH window, you should see some error messages populate the screen:
 
-![](figures/CIDA_BIOS_Cluster_Interactive_IDEs/biostats_hpc_ssh_local_forward_test.png)
+![](figures/CIDA_BIOS_Cluster_Interactive_IDEs_figures/biostats_hpc_ssh_local_forward_test.png)
 
 If you see these error messages in your SSH window, Congratulations! 
 
@@ -199,7 +199,7 @@ Now, run `squeue`.
 
 You should see an entry for your Job ID, similar to my example below.
 
-![](figures/CIDA_BIOS_Cluster_Interactive_IDEs/biostats_hpc_rstudio_launch.png)
+![](figures/CIDA_BIOS_Cluster_Interactive_IDEs_figures/biostats_hpc_rstudio_launch.png)
 
 This job will also produce two output files `rstudio_helper.out` and `rstudio_helper.err` which will log outputs or errors that the system encounters. 
 
@@ -217,7 +217,7 @@ in the address bar.
 
 You should see a loading screen, and eventually the RStudio interface!
 
-![](figures/CIDA_BIOS_Cluster_Interactive_IDEs/biostats_hpc_rstudio_interface.png)
+![](figures/CIDA_BIOS_Cluster_Interactive_IDEs_figures/biostats_hpc_rstudio_interface.png)
 
 Congratulations! You can now use RStudio on the cluster!
 
@@ -230,7 +230,7 @@ When you're finished, shut down the RStudio job by following the instructions in
 If you *don't* see the RStudio interface in your browser:
 
 1. Verify that you used the correct port in the browser. (If you used the default config, RStudio is `8896`).
-2. Double check your SSH config file and make sure your `LocalForward` directives match the template from [1B.1 SSH Config Template](#b-1-ssh-config-template)
+2. Double check your SSH config file and make sure your `LocalForward` directives match the template from [1B.1 SSH Config Template](#ssh-config-template)
 2. Run `squeue` again and verify that your job is still running. If the job is not running, check `rstudio_helper.err` and `rstudio_helper.out` for more information. 
 
 
@@ -285,7 +285,7 @@ Now, run `squeue`.
 
 You should see an entry for your Job ID, similar to my example below.
 
-![](figures/CIDA_BIOS_Cluster_Interactive_IDEs/biostats_hpc_jupyter_launch.png)
+![](figures/CIDA_BIOS_Cluster_Interactive_IDEs_figures/biostats_hpc_jupyter_launch.png)
 
 This job will also produce two output files `jupyter_helper.out` and `jupyter_helper.err` which will log outputs or errors that the system encounters. 
 
@@ -305,7 +305,7 @@ in the address bar.
 
 You should see a loading screen, and eventually the JupyterLab interface!
 
-![](figures/CIDA_BIOS_Cluster_Interactive_IDEs/biostats_hpc_jupyter_interface.png)
+![](figures/CIDA_BIOS_Cluster_Interactive_IDEs_figures/biostats_hpc_jupyter_interface.png)
 
 Congratulations! You can now use JupyterLab on the cluster!
 
@@ -318,7 +318,7 @@ When you're finished, shut down the JupyterLab job by following the instructions
 If you *don't* see the JupyterLab interface in your browser:
 
 1. Verify that you used the correct port in the browser. (If you used the default config, JupyterLab is `8895`).
-2. Double check your SSH config file and make sure your `LocalForward` directives match the template from [1B.1 SSH Config Template](#b-1-ssh-config-template).
+2. Double check your SSH config file and make sure your `LocalForward` directives match the template from [1B.1 SSH Config Template](#ssh-config-template).
 3. Run `squeue` again and verify that your job is still running. If the job is not running, check the `jupyter_helper.err` and `jupyter_helper.out` files for more information.
 4. If you're launching JupyterLab for the first time, it could take up to 10 minutes for the script to initialize the `/jupyterlab_venv` virtual environment. If the job is running (via `squeue`) but you can't connect through your browser, try waiting ~10 minutes for environment to initialize.
     - After the venv setup is complete, future launches of JupyterLab through `./jupyter_helper.sh` should take only a few seconds.
@@ -550,7 +550,7 @@ If you are curious as to how the RStudio/JupyterLab interfaces are configured, t
 
 The challenge with running RStudio/JupyterLab on the cluster is that the RStudio/JupyterLab server needs to run on a compute node, which is not directly acessible (via the network) to your local machine. Additionally, hosting a public web server on these nodes could present a security risk.
 
-![](figures/CIDA_BIOS_Cluster_Interactive_IDEs/biostats_hpc_rstudio_diagram.png)
+![](figures/CIDA_BIOS_Cluster_Interactive_IDEs_figures/biostats_hpc_rstudio_diagram.png)
 
 To facilitate a secure connection, each RStudio/JupyterLab job creates a link between your (local) computer and the compute node running the job via a pair of SSH tunnels.
 

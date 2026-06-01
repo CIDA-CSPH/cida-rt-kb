@@ -298,8 +298,7 @@ will be listed with `both modified: ` in front of them)
 2. Open those files in a text editor (RStudio, Vim, textEdit, Notepad++, etc.)
 3. Here, you will see some sections of code with:
 
-![](figures/git/figure0A.png")
-knitr::include_graphics("figures/git/figure0C.png)
+![](figures/git/figure0A.png)
 
 Once you have logged into GitKraken with you GitHub account, you will need to 
 connect it to GitHub. The default GitKraken screen has a panel called 
@@ -311,12 +310,18 @@ click on "Developer Settings", and then click on "Personal access tokens" to
 generate a token for 90 days, making sure to select "repo" (along with other 
 scopes as needed).
 
-![](figures/git/figure1A.png")
-knitr::include_graphics("figures/git/figure1B.png")
-knitr::include_graphics("figures/git/figure1C.png")
-knitr::include_graphics("figures/git/figure2A.png")
-knitr::include_graphics("figures/git/figure2B.png")
-knitr::include_graphics("figures/git/figure2C.png)
+![](figures/git/figure1A.png)
+
+![](figures/git/figure1B.png)
+
+![](figures/git/figure1C.png)
+
+![](figures/git/figure2A.png)
+
+![](figures/git/figure2B.png)
+
+![](figures/git/figure2C.png)
+
 
 Ideally, you should be able to automatically connect to GitHub without 
 generating a personal access token, but GitKraken is moderately cursed.
@@ -328,9 +333,9 @@ wish). If this step is successful, you will receive a notification within
 GitKraken on the lower left, and your screen will now display the SSH key 
 within GitKraken and under the Settings -> SSH and GPG keys tab on your GitHub:
 
-![](figures/git/figure3A.png")
-knitr::include_graphics("figures/git/figure3B.png")
-knitr::include_graphics("figures/git/figure3C.png)
+![](figures/git/figure3A.png)
+![](figures/git/figure3B.png)
+![](figures/git/figure3C.png)
 
 Congratulations, you should be successfully linked to the CIDA GitHub! 
 
