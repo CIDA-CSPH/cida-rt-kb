@@ -1,9 +1,7 @@
-#CIDA Computing Resources
+# CIDA Computing Resources
 
 
-
-
-### Introduction
+## Introduction
 
 This document introduces the available computing resources with guidelines and linkes to access/request them. 
 
@@ -11,7 +9,7 @@ Who does this apply to: All members of CIDA (Professor, RA, RI, Senior RI, PRA, 
 
 
 
-### Computing Resources Available to CIDA Members
+## Computing Resources Available to CIDA Members
 This table lists the computing resources available to CIDA members. Please note that each compute resource has differing policies about storage of PHI/HIPAA data. Please see the data storage guideline for more information.
 
 | Computing Resource | Description | HIPAA/PHI Data | 
@@ -21,16 +19,16 @@ This table lists the computing resources available to CIDA members. Please note 
 | Alpine | Almost Free for CIDA members (if requested resources <= default allocation)| No |
 | Commercial computing platforms such as AWS, IBM, ... | Cost depends on the type of requested resouces | No |
 
-#### Personal Computer\
+### Personal Computer
 
-CIDA provides all its members with a PC or Macintosh based on their preference.  
+CIDA provides members with a PC or Macintosh based on their preference.  
     
 
-#### CIDA/Biostats HPC Cluster\
+### CIDA/Biostats HPC Cluster
 
 The CIDA/Biostats HPC Cluster is an HPC cluster running the SLURM cluster management software. 
 
-This cluster is useful for computations which require large amounts of computing resource or involve long-running tasks.
+This cluster is useful for computations which require large amounts of computing resources or involve long-running tasks.
 
 Instructions for accessing and using the CIDA/Biostats HPC are available [here](CIDA_BIOS_Cluster.html).
 
@@ -43,7 +41,7 @@ Instructions for accessing and using the CIDA/Biostats HPC are available [here](
 |Software| R, Python, RStudio Server, Jupyter Lab | " | " | " |
 
 
-#### Alpine\
+### Alpine
 Alpine is the University of Colorado Boulder Research Computing’s third-generation high performance computing (HPC) cluster. Alpine is a heterogeneous compute cluster currently composed of hardware provided from University of Colorado Boulder, Colorado State University, and Anschutz Medical Campus. Alpine currently offers 317 compute nodes and a total of 18,080 cores.
 
 Alpine can be securely accessed anywhere, anytime using OpenOnDemand or ssh connectivity to the CURC system. Step-by-step instruction to access Alpine is available at:  https://curc.readthedocs.io/en/latest/clusters/alpine/quick-start.html  

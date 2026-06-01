@@ -113,7 +113,7 @@ Quote from R for Data Science:
 
 Initially, you may consider your analysis to live in your R environment (e.g. the objects listed in the environment pane). However, it’s much easier to recreate this environment from an R script than it is to recreate an R script from the environment! Your analysis therefore lives in your code. So, if you haven’t already, you should instruct RStudio to never preserve your workspace between sessions to foster this attitude and to make your life easier in the long-term. 
 
-![](figures/coding_guidelines/coding_1.png)
+![](guidelines_figures/coding_1.png)
 
 After changing this, you will notice when you restart RStudio that it will not remember the results of the code you ran last time, because remember – your analysis lives in your code.
 
@@ -142,7 +142,7 @@ If you are working within an Rstudio Project, you will not usually have to worry
 
 Sample `.gitignore` file, stored at the project-level directory (the top level of your git repository):
 
-![](figures/coding_guidelines/coding_2.png)
+![](guidelines_figures/coding_2.png)
 
 
   

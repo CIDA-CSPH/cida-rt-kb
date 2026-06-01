@@ -62,7 +62,7 @@ Git can be used to maintain a complete version history for your project files:
 
 A **Git Repository** is a term used to describe a group of files tracked by Git. In general, it is good practice to create separate Git Repositories for each of your projects.
 
-In the [next article](github_basics_02.md), we cover the basics of creating and using a Git Repository.
+*For now we just introduce the high-level concept, but in the [next article](github_basics_02.md) we will cover how to create and use a Git repository.*
 
 ## Creating a GitHub Account
 <figure>
@@ -84,19 +84,22 @@ Although there are many options for hosting remote Git repositories, the most po
 
 !!! note "CIDA GitHub Organization"
     CIDA has an official GitHub organization, which members can use to store code securely and collaborate with others. If you are a new CIDA member and need access to the CIDA GitHub organization, please email:
-    
+
     <a href="mailto:cida-rt@olucdenver.onmicrosoft.com">cida-rt@olucdenver.onmicrosoft.com</a>
 
 
 ## Git Installation
 
-**Tip:** OS-specific video walkthroughs of the steps below are available [here on OneDrive](https://olucdenver-my.sharepoint.com/:f:/g/personal/andrew_2_hill_cuanschutz_edu/IgBaTDV-g2tnT7Im_kgZjciaARO8wuXefaq4p7H9IIyyxuo?e=kYdJaw) (CU email required).
+To get started using Git, we first need to install Git on our local machine. 
+
+!!! Example "Tip"
+    If you prefer instructions in video format, video walkthroughs of the steps below are available [here on OneDrive](https://olucdenver-my.sharepoint.com/:f:/g/personal/andrew_2_hill_cuanschutz_edu/IgBaTDV-g2tnT7Im_kgZjciaARO8wuXefaq4p7H9IIyyxuo?e=kYdJaw) (CU email required) for both **Windows** and **Mac**.
 
 ### 1. Check for existing Git installation
 
 Before installing Git, we can check to see if Git is already installed on the machine.
 
-Open a **Terminal** (Mac) or **Powershell** (Windows) instance, type `git`, and press Enter.
+Open a **Terminal** (Mac) or **Powershell** (Windows) window, type `git`, and press Enter.
 
 On **Windows**, a message like:
 
@@ -153,7 +156,7 @@ If you performed [Step 1](#1-check-for-existing-git-installation) on a Mac, you 
     <figcaption>Command-line Tools Install Prompt</figcaption>
 </figure> 
 
-Simply select **Install** and wait for the system to finish the installation. 
+Simply select **Install** and wait for installation to complete. 
 
 After installing, you should be able to type `git` into the open **Terminal** window to verify that Git is installed.
 
@@ -164,7 +167,7 @@ After installing, you should be able to type `git` into the open **Terminal** wi
 
 ### 2b. Installing Git Credential Manager (Mac-only)
 
-If you are following the *Mac* steps above, you will need to install **Git Credential Manager** separately. This program is included in the Windows installer, but must be installed separately for Mac.
+If you are installing for **Mac**, you will need to install **Git Credential Manager** separately. This program is included in the Windows installer, but must be installed separately for Mac.
 
 You can download Git Credential Manager from the [Git Credential Manager GitHub repository](https://github.com/git-ecosystem/git-credential-manager/releases/): 
 
