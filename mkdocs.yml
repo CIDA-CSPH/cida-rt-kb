@@ -21,8 +21,8 @@ nav:
    - CSPH Biostats Cluster:
      - computing/CIDA_BIOS_Cluster.md
      - computing/CIDA_BIOS_Cluster_Interactive_IDEs.md
-repo_url: https://github.com/CIDA-CSPH/CIDAtools
-repo_name: CIDA-CSPH/CIDAtools
+repo_url: https://github.com/CIDA-CSPH/cida-rt-kb
+repo_name: CIDA-CSPH/cida-rt-kb
 plugins:
  - search
 theme:

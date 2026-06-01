@@ -45,39 +45,48 @@ Git was first released in 2005 as an open-source tool for managing the Linux ker
     <figcaption>'What are the primary version control systems you use?' <a href="https://survey.stackoverflow.co/2022#version-control-version-control-system">StackOverflow 2022 Developer Survey</a> </figcaption>
 </figure>
 
+!!! info "Fun Fact"
+    The Linux kernel surpassed *40 million lines of code* in 2025, with contributions from over 5000 developers in 2025 alone. [^1]
 
-Git can be used to:
+[^1]: https://commandlinux.com/statistics/linux-kernel-contributors-lines-of-code-statistics/
 
-1. Maintain a complete history for your project:
-    - *What changes have been made to each file?*
-    - *Who made the changes?*
-    - *When were the changes made?*
-    <figure>
-        <img width=60% src="github_setup_01_figures/file_state.png">
-        <figcaption>File Changes over Time</figcaption>
-    </figure>
-2. Manage and synchronize code contributions from multiple developers or systems:
-    <figure>
-        <img width=50% src="github_setup_01_figures/multiple_contributions.png">
-        <figcaption>Multiple Code Contriubutors</figcaption>
-    </figure>
+Git can be used to maintain a complete version history for your project files:
 
-## Introduction to GitHub
+- *What changes have been made to each file?*
+- *Who made the changes?*
+- *When were the changes made?*
+<figure>
+    <img width=60% src="github_setup_01_figures/file_state.png">
+    <figcaption>Example of a Git Repository</figcaption>
+</figure>
 
+A **Git Repository** is a term used to describe a group of files tracked by Git. In general, it is good practice to create separate Git Repositories for each of your projects.
+
+In the [next article](github_basics_02.md), we cover the basics of creating and using a Git Repository.
+
+## Creating a GitHub Account
 <figure>
     <img src="github_setup_01_figures/git_plus_github.png">
 </figure> 
 
-GitHub is a popular web service which integrates with Git, allowing users to host remote/online versions of their Git repositories.
+On its own, Git is a powerful version control tool. However, one of the other benefits of version control is the ability to back up code online, and *share* code with others.
 
-GitHub was founded in 2008 and purchased by Microsoft in 2018. 
+To allow for this, Git has the concept of a **remote repository**, an online location which mirrors a **local repository** located on your computer.
 
-Users can configure their local Git repository to send and receive changes from a remote GitHub repository, allowing them to share code online and develop software collaboratively. 
+<figure>
+    <img src="github_setup_01_figures/multiple_contributions.png">
+</figure>
+
+After configuring a remote repository, you can send changes to (**push**) or receive changes from (**pull**) the remote repository. 
 
 
-**Note:** Other popular GitHub alternatives are GitLab and self-hosted/internal Git servers.
+Although there are many options for hosting remote Git repositories, the most popular is **GitHub**. 
 
-### Creating a GitHub Account
+!!! note "CIDA GitHub Organization"
+    CIDA has an official GitHub organization, which members can use to store code securely and collaborate with others. If you are a new CIDA member and need access to the CIDA GitHub organization, please email:
+    
+    <a href="mailto:cida-rt@olucdenver.onmicrosoft.com">cida-rt@olucdenver.onmicrosoft.com</a>
+
 
 ## Git Installation
 

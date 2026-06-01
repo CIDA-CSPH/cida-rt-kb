@@ -4,6 +4,9 @@ This website holds CIDA's coding guidelines as well as tutorials and other infor
 
 ---
 
+!!! warning "Site Under Construction"
+    This site is currently under construction. Some content may be incomplete or missing, and some links may be broken.
+
 ## Getting Started
 
 If you are a new CIDA employee, we recommend you start by:
@@ -25,4 +28,4 @@ CIDA members who work on large-scale data analyses may benefit from reading abou
 
 ## Contributing
 
-If you are interested in contributing to this site (making edits, fixing issues, or writing new content) please view our [Contributor's Guide](contributing/CONTRIBUTING.md) for instructions on how to download and configure the site. 
+If you are interested in contributing to this site (making edits, fixing issues, or writing new content) please view our [CONTRIBUTING.md](contributing/CONTRIBUTING.md) for instructions on how to download and configure the site. 

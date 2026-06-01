@@ -1,6 +1,6 @@
 # Contributing
 
-We are interested in contributions from any CIDA member!
+We are interested in contributions from all CIDA members!
 
 For organization and tracking purposes, we ask that all contributions are submitted through GitHub. 
 
