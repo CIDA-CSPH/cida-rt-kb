@@ -93,13 +93,23 @@ This section describes best practices for R, R Markdown, and general coding. The
 *	Program files should always be ASCII text files. Program files should always be immediately source-able into R or SAS. If you cannot source your file directly into R (SAS), then the file format is not acceptable. Word processing programs like Microsoft Word do not save files as text files – do not save code as Word documents.
 *	Use a monospace font to write or display code. Variable space fonts like Times New Roman can alter the apparent structure of a program (and its readability).
 *	Consistently indent your code. Comments should be indented to the same level of indentation of the code to which the comment pertains. Comments can also appear at the end of a code line if space permits.
-*	For all objects/functions in your code, strive for names that are concise and meaningful. Similarly, ensure the script names are also [concise]{.underline} and [meaningful]{.underline}. 
+*	For all objects/functions in your code, strive for names that are concise and meaningful. Similarly, ensure the script names are also <ins>concise</ins> and <ins>meaningful</ins>. 
 
 ### Workflow best practices
 
 Quote from R for Data Science: 
 
-> One day you will need to quit R, go do something else and return to your analysis the next day. One day you will be working on multiple analyses simultaneously that all use R and you want to keep them separate. One day you will need to bring data from the outside world into R and send numerical results and figures from R back out into the world. To handle these real life situations, you need to make two decisions: 1) What about your analysis is “real”, i.e. what will you save as your lasting record of what happened? 2) Where does your analysis “live”?
+> One day you will need to quit R, go do something else and return to your analysis the next day. 
+>
+> One day you will be working on multiple analyses simultaneously that all use R and you want to keep them separate. 
+>
+> One day you will need to bring data from the outside world into R and send numerical results and figures from R back out into the world. 
+>
+> To handle these real life situations, you need to make two decisions: 
+>
+> 1) What about your analysis is “real”, i.e. what will you save as your lasting record of what happened? 
+>
+> 2) Where does your analysis “live”?
 
 Initially, you may consider your analysis to live in your R environment (e.g. the objects listed in the environment pane). However, it’s much easier to recreate this environment from an R script than it is to recreate an R script from the environment! Your analysis therefore lives in your code. So, if you haven’t already, you should instruct RStudio to never preserve your workspace between sessions to foster this attitude and to make your life easier in the long-term. 
 
@@ -111,7 +121,7 @@ If you are working within an Rstudio Project, you will not usually have to worry
 
 ### Useful reporting functions: The CIDAtools R Package 
 *	The CIDAtools R package, available [here](https://github.com/CIDA-CSPH/CIDAtools), has a suite of useful functions that makes producing CIDA reports easier. The readme of this package also has information on reporting templates/outlines. 
-*	Please see the package documentation for more information, and contact the [committee chair](mailto:ryan.a.peterson@cuanschutz.edu) with suggestions for making this package more useful. 
+*	Please see the package documentation for more information, and contact the [Research Tools Committee](mailto:cida-rt@olucdenver.onmicrosoft.com) with suggestions for making this package more useful. 
 
 ### Where to store your code
 
@@ -123,7 +133,7 @@ If you are working within an Rstudio Project, you will not usually have to worry
 
 *	Your code and files should be committed and pushed to GitHub regularly (daily recommended).
 *	**Data should not be tracked in Git**. Ensure your repository has a text file titled `.gitignore` at its main level that tells Git software not to track any data related files or file types. See below for a sample .gitignore file that ignores any CSV, XLSX files, as well as any files stored in DataProcessed or DataRaw subdirectories.
-*	Contact [Ryan Peterson](mailto:ryan.a.peterson@cuanschutz.edu) or [SOM IT](mailto:sph@medschool.zendesk.com) with issues related to GitHub, or SOM IT. 
+*	Contact the [Research Tools Committee](mailto:cida-rt@olucdenver.onmicrosoft.com) with issues related to GitHub.
 
 ### Useful Links
 

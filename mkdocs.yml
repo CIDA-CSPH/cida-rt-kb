@@ -1,10 +1,8 @@
 site_name: CIDA Research Tools Knowledge Base
 nav:
  - Home: index.md
- - Contributing: contributing/CONTRIBUTING.md
- - CIDA Coding Guidelines:
-   - coding_guidelines.md
-   - data_storage.md
+ - CIDA Coding Guidelines: coding_guidelines.md
+ - CIDA Data Storage Guidelines: data_storage.md
  - Programming Tutorials:
    - sas-macros.md
    - tabling_packages.md
@@ -21,6 +19,7 @@ nav:
    - CSPH Biostats Cluster:
      - computing/CIDA_BIOS_Cluster.md
      - computing/CIDA_BIOS_Cluster_Interactive_IDEs.md
+ - Contributing: contributing/CONTRIBUTING.md
 repo_url: https://github.com/CIDA-CSPH/cida-rt-kb
 repo_name: CIDA-CSPH/cida-rt-kb
 plugins:
