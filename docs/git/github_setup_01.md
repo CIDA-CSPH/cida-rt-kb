@@ -6,17 +6,16 @@ This article introduces the concept of Version Control by providing some motivat
 
 If you already have Git/GitHub configured, feel free to skip to the [next article](github_basics_02.md) in the series.
 
-## What is version control?
+## What is version control, and why do we need it?
 
-Version control simply means *tracking changes to a set of files over time*, typically with the ability to access to previous versions of the files if needed.
+Version control simply means *tracking changes to a set of files over time*, usually with the ability to access to previous versions of the files if needed.
 
 When people refer to 'using version control', they are typically referring to the use of a **Version Control System** or **VCS**, a software tool designed to track changes and state for multiple files within a project.
 
-## Why do we need version control?
+For CIDA members, Git enables us to create reproducible analytical code bases, where the full history of the analysis is available to ourselves and collaborators which we choose to share it with.
 
-*CIDA members are encouraged (required?) to use a dedicated version control system (specifically **Git**) to manage each of their projects*.
-
-For CIDA members, Git enables us to create reproducible analytical code bases, where the full history of the analysis is available to ourselves and those which we choose to share it with.
+!!! info
+    All CIDA members are encouraged to use version control (specifically **Git** and **GitHub**) to manage code for each of their projects.
 
 In the past, you may have encountered a situation like this:
 
@@ -29,7 +28,7 @@ The above example shows a manual form of version control. The user is manually m
 
 This type of version control is functional in the short-term, but over time it can become convoluted, introduce errors, and hinder reproducibility and collaboration.
 
-A dedicated VCS like Git is designed to solve this problem. Git can handle arbitrarily sized projects, and can track any type of file (Scripts/Notebooks, Reports, Tables/Figures, etc)
+A dedicated VCS like Git is designed to solve these types of problems. Git can handle arbitrarily sized projects, and can track any type of file (Scripts/Notebooks, Reports, Tables/Figures, etc)
 
 ## Introduction to Git and Version Control
 
@@ -57,10 +56,12 @@ Git can be used to maintain a complete version history for your project files:
 - *When were the changes made?*
 <figure>
     <img width=60% src="github_setup_01_figures/file_state.png">
-    <figcaption>Example of a Git Repository</figcaption>
+    <figcaption>Example of file history in a Git repository</figcaption>
 </figure>
 
-A **Git Repository** is a term used to describe a group of files tracked by Git. In general, it is good practice to create separate Git Repositories for each of your projects.
+A **Git repository** is a term used to describe a group of files tracked by Git. In general, it is good practice to use **separate** Git repositories for each of your projects.
+
+A Git repository will reside in a folder (usually the top-level folder of your project) and can track all files or subdirectories within that folder or below it (within subdirectories, etc).
 
 *For now we just introduce the high-level concept, but in the [next article](github_basics_02.md) we will cover how to create and use a Git repository.*
 
@@ -71,19 +72,24 @@ A **Git Repository** is a term used to describe a group of files tracked by Git.
 
 On its own, Git is a powerful version control tool. However, one of the other benefits of version control is the ability to back up code online, and *share* code with others.
 
-To allow for this, Git has the concept of a **remote repository**, an online location which mirrors a **local repository** located on your computer.
+To allow for this, Git has the concept of a **remote repository**, an online location which mirrors the **local repository** located on your computer.
+
 
 <figure>
     <img src="github_setup_01_figures/multiple_contributions.png">
 </figure>
 
-After configuring a remote repository, you can send changes to (**push**) or receive changes from (**pull**) the remote repository. 
+After configuring a remote repository, you can send local changes to (**push**) or receive changes from (**pull**) the remote repository. 
 
 
 Although there are many options for hosting remote Git repositories, the most popular is **GitHub**. 
 
+To use GitHub, you must first create a GitHub account. If you are a CIDA member or employee, we recommend using your CU Anschutz email to create this account.
+
+Once created, take note of your **GitHub Username** as well as the **Email Address** associated with your account. Both these items will be needed to configure Git.
+
 !!! note "CIDA GitHub Organization"
-    CIDA has an official GitHub organization, which members can use to store code securely and collaborate with others. If you are a new CIDA member and need access to the CIDA GitHub organization, please email:
+    CIDA has an official GitHub organization, which members can use to store code securely and collaborate with others. If you are a new CIDA employee and need access to the CIDA GitHub organization, please email:
 
     <a href="mailto:cida-rt@olucdenver.onmicrosoft.com">cida-rt@olucdenver.onmicrosoft.com</a>
 
@@ -167,7 +173,7 @@ After installing, you should be able to type `git` into the open **Terminal** wi
 
 ### 2b. Installing Git Credential Manager (Mac-only)
 
-If you are installing for **Mac**, you will need to install **Git Credential Manager** separately. This program is included in the Windows installer, but must be installed separately for Mac.
+If you are installing for **Mac**, you will need to install **Git Credential Manager** separately since this program is not included in the default Git installation (like it is for Windows).
 
 You can download Git Credential Manager from the [Git Credential Manager GitHub repository](https://github.com/git-ecosystem/git-credential-manager/releases/): 
 
@@ -193,14 +199,154 @@ You can also type the `arch` command in **Terminal** to print the architecture.
 
 ## Git Configuration
 
-### Obtaining Git Credentials
-
-STUB
-
 ### Configuring `user.name` and `user.email`
 
-STUB
+In order for Git to attribute your commits to your account correctly, we need to provide Git with your GitHub Username and Email Address associated with your GitHub account.
 
-### Alternative Method - Git SSH Credentials
+You can run the folowing commands in Terminal/Powershell to configure these items:
 
-STUB
+<code>
+git config --global user.name <mark>&lt;GitHub Username&gt;</mark>
+</code>
+
+<code>
+git config --global user.email <mark>&lt;GitHub Email Address&gt;</mark>
+</code>
+
+!!! info "Git Credential Manager"
+    Because the above commands use the `--global` flag, these two options will apply to all repositories on your computer.
+
+    For more information about Git config options, check out [Chapter 8.1 of Pro Git (2nd Edition)](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration).
+
+
+### Obtaining Git Credentials
+
+If you followed the above Git installation path (which installs Git Credential Manager) **you do not need to manually configure any Git credentials or tokens** on your machine.
+
+One of the benefits of using Git Credential Manager is that it handles the token creation and permissions internally. In the next article, we will cover some basic Git operations. The first time we execute an operation that requires authentication, Git Credential Manager will prompt us to log in with Git, and then setup an access token for us. 
+
+Feel free to move to the [next article in the series](github_basics_02.md), where we will cover basic Git/GitHub usage!
+
+### (Optional) Alternative Methods for Git Credentials
+
+If you are not using Git Credential Manager, or are working on a system where it is not available, you will need to use an alterative authentication solution.
+
+As of 2026, there are multiple options for Git credentials:
+<table>
+    <tr>
+        <th> Credential Type </th>
+        <th>Pros</th>
+        <th>Cons</th>
+    </tr>
+    <tr>
+        <td>SSH Key</td>
+        <td>
+            <ul>
+                <li>Easy to generate new keys with minimal configuration needed.</li>
+                <li>'Just works'</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>No fine-grained permissions control, so all repositories are accessible.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><mark>'Classic' Token</mark></td>
+        <td>
+            <ul>
+                <li>Simpler to configure than Fine-grained Token.</li>
+                <li>Easier to configure for SSO (required for CIDA GitHub organization)</li>
+                <li>Works for cloning over HTTP in environments where SSH is restricted (i.e. HPC)</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Permissions are more granular than SSH Key, but no per-repository control.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Fine-grained Token</td>
+        <td>
+            <ul>
+                <li>Best permission control, can grant permissions on a per-repository level.</li>
+                <li>Works for cloning over HTTP in environments where SSH is restricted (i.e. HPC)</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Potentially harder to configure for SSO (required for CIDA GitHub organization)</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+Of these methods, I prefer the **SSH Key** or **Classic Token** for ease of use in development.
+
+#### Configuring an SSH Key
+
+To configure an SSH key, you first need to generate an SSH key on your local machine. On most systems (Windows/Mac/Linux) this is easiest to accomplish using the `ssh-keygen` utility from Terminal or Powershell.
+
+!!! note "SSH Key Creation"
+    I highly recommend creating a **new** SSH key for your GitHub work, even if you already have an SSH key generated.
+
+![Creating an SSH key with ssh-keygen](github_setup_01_figures/ssh_key_creation.png)
+
+Once the key is created, note the path of the public key file (red arrow)
+
+Navigate to GitHub.com, then go to Settings->SSH & GPG Keys, and click the 'New SSH key' button:
+
+![New SSH Key Page](github_setup_01_figures/ssh_key_page.png)
+
+On the SSH key page, paste the full contents of the **public key** file into the box. 
+
+The public key should start with `ssh-*`.
+
+![Adding new SSH Key](github_setup_01_figures/add_new_ssh_key.png)
+
+
+
+#### Configuring a Classic Token
+
+To configure a Classic Token, navigate to GitHub in your browser.
+
+Then, navigate to Settings->Developer Settings->Tokens (classic).
+
+![Tokens (classic) page](github_setup_01_figures/classic_token.png)
+
+Click the 'Generate new token' button, then click 'Generate new token (classic)'.
+
+![Creating a new classic token](github_setup_01_figures/new_classic_token.png)
+
+On the token creation page, enter a name for the token, and choose an expiration date (or no expiration date).
+
+You can select which permissions you want the token to have.
+
+The minimal permissions I would use are:
+
+- `repo` - Allows for reads/writes from your private repositories.
+- `workflow` - Allows for creation of GitHub Actions workflows.
+
+![Token permissions](github_setup_01_figures/token_perms.png)
+
+Once configured, click the 'Generate token' button at the bottom of the screen. You will have a chance to copy your token, which will be presented in the green box.
+
+I recommend copying this token and saving into your password manager or another safe place, as you will be unable to recover this token (and will need to regenerate a new token) if you lose it!
+
+You can now push/pull from GitHub, using the token as your password when prompted.
+
+#### SSO Configuration
+
+Regardless of the key method you used configured above, there is one extra step required for your token to be able to access repositories in the CIDA organization:
+
+First, navigate to the either the Settings->Developer Settings->Tokens (classic) page (for a Classic Token) or Settings->SSH & GPG Keys (for an SSH Key).
+
+On the tokens page, locate the token/key you created, click the 'Configure SSO' button, and then select the 'CIDA-CSPH' organization.
+
+![SSO Auth](github_setup_01_figures/cida_org_auth.png)
+
+This will prompt you to log in with your CU credentials. Afterwards, your key/token will be authorized to access repositories in the CIDA organization.
+
+
