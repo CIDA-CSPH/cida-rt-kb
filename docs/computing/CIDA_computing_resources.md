@@ -17,6 +17,7 @@ This table lists the computing resources available to CIDA members. Please note 
 | Personal Computer/Laptop | Free for CIDA members| Limited | 
 | CIDA/Biostats HPC | Free for CIDA members | Limited |
 | Alpine | Almost Free for CIDA members (if requested resources <= default allocation)| No |
+| Alderaan | Almost Free for CIDA members (if requested resources <= default allocation)| No | 
 | Commercial computing platforms such as AWS, IBM, ... | Cost depends on the type of requested resouces | No |
 
 ### Personal Computer
@@ -57,9 +58,11 @@ Alpine can be securely accessed anywhere, anytime using OpenOnDemand or ssh conn
 |HIPAA compliant |NO |NO | NO  |
 |OS |RHEL 8.4 |RHEL 8.4 |
 
+### Alderaan
+
+Alderaan is a CU-Denver managed HPC cluster, details on the configuration of the system can be found at: https://ccm-docs.readthedocs.io/en/latest/facilities/#computing-facilities
 
 
-    
 ### Useful Links
 Health Insurance Portability and Accountability Act (HIPAA):  
 http://www.hhs.gov/hipaa/for-professionals/index.html
