@@ -62,7 +62,8 @@ Who does this apply to: All members of CIDA (Professor, RA, RI, Senior RI, PRA, 
 * Best Practices: 
     * Up-to-date raw data for all projects should be available in their expected location on this drive at least weekly, and especially at project conclusion, or prior to a project not being actively worked on.
     * Eliminate redundancies and intermediate data sets in projects with “big” data; only store the data you need to make code and reports run. 
-* CIDA pays for this server storage on a [per-GB-month basis](https://www.cuanschutz.edu/offices/office-of-information-technology/tools-services/storage-servers-and-backups), so be cognizant of the size of the data utilized by your projects.
+* CIDA pays for this server storage on a [per-GB-month basis](https://www.cuanschutz.edu/offices/office-of-information-technology/tools-services/storage-servers-and-backups), so be cognizant of the size of the data utilized by your projects. If a project requires storing over 100 GBs of data work with your supervisors or the head of the MOU to determine if extra fees need to be collected for the project.
+* For long term archiving of projects, CIDA members should should consider applying lossless compression to files.
 
 #### OneDrive for Business
 
