@@ -21,7 +21,7 @@ For CIDA members, Git enables us to create reproducible analytical code bases, w
 In the past, you may have encountered a situation like this:
 
 <figure>
-    <img src="github_setup_01_figures/manual_version_control.png">
+    <img src="github_setup_01_figures/manual_version_control.png" alt="An image showing multiple versions of a file with different suffixes and names saved in a folder">
     <figcaption>'Manual' Version Control</figcaption>
 </figure>
 
@@ -34,19 +34,19 @@ A dedicated VCS like Git is designed to solve this problem. Git can handle arbit
 ## Introduction to Git and Version Control
 
 <figure>
-    <img width=25% src="github_setup_01_figures/Git-Logo-2Color.png">
+    <img width=25% src="github_setup_01_figures/Git-Logo-2Color.png" alt="the Git logo">
     <figcaption>Git Logo</figcaption>
 </figure> 
 
 Git was first released in 2005 as an open-source tool for managing the Linux kernel source code. Since then, it has become the VCS of choice for most developers. 
 
-<figure>
-    <img src="github_setup_01_figures/so_vcs_usage.png">
-    <figcaption>'What are the primary version control systems you use?' <a href="https://survey.stackoverflow.co/2022#version-control-version-control-system">StackOverflow 2022 Developer Survey</a> </figcaption>
-</figure>
-
 !!! info "Fun Fact"
     The Linux kernel surpassed *40 million lines of code* in 2025, with contributions from over 5000 developers in 2025 alone. [^1]
+
+<figure>
+    <img src="github_setup_01_figures/so_vcs_usage.png" alt="survey result showing that ~94% of repsondents use Git for version control">
+    <figcaption>'What are the primary version control systems you use?' <a href="https://survey.stackoverflow.co/2022#version-control-version-control-system">StackOverflow 2022 Developer Survey</a> </figcaption>
+</figure>
 
 [^1]: https://commandlinux.com/statistics/linux-kernel-contributors-lines-of-code-statistics/
 
@@ -56,7 +56,7 @@ Git can be used to maintain a complete version history for your project files:
 - *Who made the changes?*
 - *When were the changes made?*
 <figure>
-    <img width=60% src="github_setup_01_figures/file_state.png">
+    <img width=60% src="github_setup_01_figures/file_state.png" alt="Figure showing the state of multiple project files being added and modified over time.">
     <figcaption>Example of a Git Repository</figcaption>
 </figure>
 
@@ -66,7 +66,7 @@ A **Git Repository** is a term used to describe a group of files tracked by Git.
 
 ## Creating a GitHub Account
 <figure>
-    <img src="github_setup_01_figures/git_plus_github.png">
+    <img src="github_setup_01_figures/git_plus_github.png" alt="Logo showing Git and GitHub together">
 </figure> 
 
 On its own, Git is a powerful version control tool. However, one of the other benefits of version control is the ability to back up code online, and *share* code with others.
@@ -74,7 +74,7 @@ On its own, Git is a powerful version control tool. However, one of the other be
 To allow for this, Git has the concept of a **remote repository**, an online location which mirrors a **local repository** located on your computer.
 
 <figure>
-    <img src="github_setup_01_figures/multiple_contributions.png">
+    <img src="github_setup_01_figures/multiple_contributions.png" alt="Figure showing two users contributing to a GitHub project.">
 </figure>
 
 After configuring a remote repository, you can send changes to (**push**) or receive changes from (**pull**) the remote repository. 
@@ -123,7 +123,7 @@ and trigger a pop-up prompt to install the `Command Line Developer Tools`.
 On Windows, you can download Git from the official Git website ([https://git-scm.com/install/](https://git-scm.com/install/)). We recommend downloading the `Git for Windows/x64 Setup`.
 
 <figure>
-    <img src="github_setup_01_figures/git_install.png">
+    <img src="github_setup_01_figures/git_install.png" alt="Screenshot of the Git website, showing where to download the Windows version of Git">
     <figcaption>Git Download Page</figcaption>
 </figure> 
 
@@ -131,19 +131,19 @@ After downloading, run the installer. Default installation options are fine with
 
 1. We recommend setting the default branch name to `main` (from `master`)
     <figure>
-        <img src="github_setup_01_figures/git_branch_override.png">
+        <img src="github_setup_01_figures/git_branch_override.png" alt="Git installation screen, showing the default branch name set as 'main'.">
         <figcaption>Override Default Branch Name</figcaption>
     </figure> 
 2. Ensure that 'Git Credential Manager' is selected for installation along with Git.
     <figure>
-        <img src="github_setup_01_figures/git_credential_manager.png">
+        <img src="github_setup_01_figures/git_credential_manager.png" alt="Git installation screen, showing that 'Git Credential Manager' is selected.'>
         <figcaption>Git Credential Manager</figcaption>
     </figure> 
 
 Once the install is complete, you can open a *new* PowerShell window to verify that Git is installed.
 
 <figure>
-    <img src="github_setup_01_figures/git_installed_windows.png">
+    <img src="github_setup_01_figures/git_installed_windows.png" alt="A screenshot of a Powershell window showing that Git is installed.">
     <figcaption>Successful Git Installation (Windows)</figcaption>
 </figure> 
 
@@ -152,7 +152,7 @@ Once the install is complete, you can open a *new* PowerShell window to verify t
 If you performed [Step 1](#1-check-for-existing-git-installation) on a Mac, you may have encountered a pop-up prompting you to install the Command Line Developer Tools.
 
 <figure>
-    <img src="github_setup_01_figures/mac_git_install_prompt.png">
+    <img src="github_setup_01_figures/mac_git_install_prompt.png" alt="A pop-up dialog prompting the user to install command-line developer tools.">
     <figcaption>Command-line Tools Install Prompt</figcaption>
 </figure> 
 
@@ -161,7 +161,7 @@ Simply select **Install** and wait for installation to complete.
 After installing, you should be able to type `git` into the open **Terminal** window to verify that Git is installed.
 
 <figure>
-    <img src="github_setup_01_figures/git_installed_mac.png">
+    <img src="github_setup_01_figures/git_installed_mac.png" alt="A screenshot of a Terminal window showing that Git is installed.">
     <figcaption>Successful Git Installation (Mac)</figcaption>
 </figure> 
 
@@ -174,7 +174,7 @@ You can download Git Credential Manager from the [Git Credential Manager GitHub 
 Under the **Assets** section, choose either `gcm-osx-arm64-*.pkg` or `gcm-osx-x64-*.pkg`, depending on your computer's architecture. 
 
 <figure>
-    <img src="github_setup_01_figures/git_credential_manager_pkg.png">
+    <img src="github_setup_01_figures/git_credential_manager_pkg.png" alt="Screenshot showing the download location for Git Credential Manager on GitHub, if using a Mac.">
     <figcaption>Git Credential Manager Packages</figcaption>
 </figure> 
 
@@ -184,7 +184,7 @@ If you are not sure, navigate to ` → About This Mac` on the top bar and che
 - `Intel *` → Download the `gcm-osx-x64-*.pkg`
 
 <figure>
-    <img src="github_setup_01_figures/mac_arch.png">
+    <img src="github_setup_01_figures/mac_arch.png" alt="Screenshot of the About This Mac window, showing that the Mac uses an Apple (ARM) chip.">
     <figcaption>About This Mac<br>(Apple/ARM64 Chip)</figcaption>
 </figure> 
 
@@ -193,14 +193,84 @@ You can also type the `arch` command in **Terminal** to print the architecture.
 
 ## Git Configuration
 
-### Obtaining Git Credentials
-
-STUB
-
 ### Configuring `user.name` and `user.email`
 
-STUB
+After installing Git, your next step should be to configure your Git user name and email.
+
+Open a Terminal or Powershell window and run the following two commands:
+
+```{shell}
+git config --global user.name <GitHub Username>
+git config --global user.email <GitHub Email Address>
+```
+
+!!! info
+    Be sure to use your GitHub username and the same email address you used when signing up for GitHub to ensure your commits are attributed to your account.
+
+### Obtaining Git Credentials
+
+If using Git Credential Manager, there is no need to directly create GitHub token or key, as Git Credential Manager will prompt you to log in via GitHub the first time you perform a Git operation that requires authentication.
+
+<figure>
+    <img src="github_setup_01_figures/git_credential_manager_prompt.png" alt="Screenshot of the Git Credential Manager prompt requesting a user login.">
+    <figcaption>GitHub login prompt, seen after running a <code>git pull</code> for the first time using GCM.</figcaption>
+</figure> 
+
 
 ### Alternative Method - Git SSH Credentials
 
-STUB
+SSH key is an option for GitHub authentication in cases where Git Credential Manager is not available (i.e. on a HPC or other shared system, etc.)
+
+To create an SSH key, open a Terminal or Powershell and run the following command:
+
+```
+ssh-keygen
+```
+
+If you have already created an SSH key, pay attention to the default key path, as it may overwrite your existing key.
+
+<figure>
+    <img src="github_setup_01_figures/ssh_key_creation.png" alt="Screenshot showing the ssh-keygen command (blue arrow), the location where the key was written (orange arrow), and the content of the public key file (purple arrow)">
+    <figcaption>Screenshot showing the ssh-keygen command (blue arrow), the location where the key was written (orange arrow), and the contents of the public key file (purple arrow)</figcaption>
+</figure> 
+
+Open or print out the **.pub** key file and copy the contents (example shown above by the purple arrow).
+
+!!! info 
+    SSH key creation will create two files, one without an extension, and one with a `.pub` extension. Make sure to copy the contents of the public key (`.pub`) file, not the private key (no extension) file. 
+
+Navigate to GitHub -> Settings and select the 'SSH and GPG Keys' section on the sidebar. Now, click the green 'New SSH key' button on the top right of the page.
+
+<figure>
+    <img src="github_setup_01_figures/ssh_key_location.png" alt="Screenshot showing where SSH key settings are located on GitHub.">
+    <figcaption>GitHub SSH Key Settings Location</figcaption>
+</figure> 
+
+This will open a prompt asking you for your SSH key:
+
+<figure>
+    <img src="github_setup_01_figures/github_ssh_key_entry.png" alt="Screenshot showing GitHub SSH key entry field.">
+    <figcaption>GitHub SSH Key Entry Field</figcaption>
+</figure> 
+
+Paste the contents of the public key into the 'Key' field, and click the green 'Add SSH key' button.
+
+Congratulations, you have added a new SSH key!
+
+!!! info "Cloning via SSH"
+    If the SSH key you created does not live at the default path suggested by `ssh-keygen`, Git will not use your SSH key for authentication by default.
+    The easiest way to get Git to use your SSH key is to add a host entry for GitHub in your SSH config file.
+
+    Navigate to (or create) `~/.ssh/config` and add an entry as follows:
+    ```
+    Host github.com
+	    IdentityFile <path to your private key>
+    ```
+
+    This will tell SSH to authenticate with your key when connecting to github.com via SSH.
+
+## Conclusion
+
+In this article, we covered the basics of version control, creating a GitHub account, installing Git, and some basic configuration.
+
+In future articles, we will cover how to actually *use* Git for our projects.
