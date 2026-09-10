@@ -274,3 +274,18 @@ Congratulations, you have added a new SSH key!
 In this article, we covered the basics of version control, creating a GitHub account, installing Git, and some basic configuration.
 
 In future articles, we will cover how to actually *use* Git for our projects.
+
+## Additional Resources
+
+Below are a selection of additional resources which may be useful when learning Git and GitHub:
+
+|Name|Description|
+|--|--|
+|[Happy Git with R](https://happygitwithr.com) | eBook with practical guidance for using Git and Github in an R coding workflow. |
+|[Pro Git 2nd Edition](https://git-scm.com/book/en/v2) | Free eBook that goes in-depth on Git operations and usage. |
+|[Git Credential Manager Releases Page](https://github.com/git-ecosystem/git-credential-manager/releases/) | Link to the 'releases' page for Git Credential Manager for easy access to the GCM binaries. |
+|[GitHub Documentation - Getting Started](https://docs.github.com/en/get-started) | Home page for GitHub's documentation with resources to learn about Git and GitHub functionality. |
+|[GitHub Documentation - Connect with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) | Information on configuring SSH auth for Git/GitHub. |
+|[Git Documentation - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) | Information on installing Git on your local machine. |
+
+
