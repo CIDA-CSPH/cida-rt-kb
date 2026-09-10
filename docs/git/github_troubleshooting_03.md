@@ -6,4 +6,5 @@ This article walks through some common issues that arise when using Git and GitH
 
 If you are not currently experiencing any of these issues, feel free to skip to the [next article](github_troubleshooting_03.md) in the series.
 
-## STUB - Content goes here
+!!! warning "Under Construction"
+    This article is currently under construction, please check back at a later date.
