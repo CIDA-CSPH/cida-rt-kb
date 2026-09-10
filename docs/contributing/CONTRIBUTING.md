@@ -34,7 +34,9 @@ Forking the RT_Test_Site repository creates a copy of the repository under your 
 
 You can create a fork using the 'Fork' button on the main repository:
 
-<img src="figures/fork_repository_button.png" alt="Image showing the location of the 'fork' button on a GitHub repository page">
+![](/docs/contributing/figures/fork_repository_button.png)
+
+<img src="/docs/contributing/figures/fork_repository_button.png" alt="Image showing the location of the 'fork' button on a GitHub repository page">
 
 ### 2. Clone the forked repository
 You can clone your fork of the site repository using any method you find convenient (command line, RStudio, etc).
